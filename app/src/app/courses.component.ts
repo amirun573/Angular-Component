@@ -1,3 +1,4 @@
+import { CoursesService } from './courses.service';
 import {Component} from '@angular/core';
 
 //Metadata
@@ -16,7 +17,11 @@ export class CoursesComponent{
 
     title = "List of Courses";
 
-    courses = ["course1", "course2","course3"];
+    courses;
+
+    constructor(service: CoursesService){
+         this.courses = service.getCourses();
+    }
 
     // Logic for calling an HTTP service
 }
