@@ -18,7 +18,5 @@ export class CoursesComponent{
 
     courses = ["course1", "course2","course3"];
 
-    getTitle(){
-        return this.title;
-    }
+    // Logic for calling an HTTP service
 }
